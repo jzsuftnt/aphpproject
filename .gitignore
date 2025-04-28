@@ -1,0 +1,45 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Composer
+composer.phar
+/vendor/
+
+# Environment files
+.env
+.env.backup
+
+# IDE files
+/.idea
+/.vscode
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Cache and logs
+/logs/
+*.log
+*.cache
+/cache/
+npm-debug.log
+yarn-error.log
+
+# Generated files
+/public/hot
+/public/storage
+
+# PHPUnit
+.phpunit.result.cache
+
+# Homestead
+Homestead.json
+Homestead.yaml
