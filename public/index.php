@@ -19,6 +19,14 @@ if (empty($route)) {
     exit;
 }
 
+// Handle download route
+if ($route === 'download' || strpos($route, 'download') === 0) {
+    $controller = new \App\controllers\Cwe22Controller();
+    $filename = isset($_GET['file']) ? $_GET['file'] : null;
+    $controller->downloadFile($filename);
+    exit;
+}
+
 // Handle 404 error
 require BASE_PATH . '/src/views/404.php';
 ?>
