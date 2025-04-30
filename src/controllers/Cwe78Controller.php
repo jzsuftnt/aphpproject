@@ -65,6 +65,8 @@ class Cwe78Controller
         $safeHost = escapeshellarg($host);
         // use escapeshellcmd
         $safeHost = escapeshellcmd($host);
+
+        // SECURE CODE: Use sanitized input in the command
         $command = "ping -c 4 " . $safeHost;
 
         // VULNERABLE CODE: Pattern "...$EXP..." - Direct string interpolation with user input
